@@ -1,9 +1,20 @@
 <?php
+
+date_default_timezone_set('America/Buenos_Aires');
 $month = isset($argv[1]) ? (int)$argv[1] : date('n');
 $year = isset($argv[2]) ? (int)$argv[2] : date('Y');
+if (!is_file($_SERVER['HOME'] . '/.odiostatsrc')) {
+	die("Falta el access_token\n");
+}
 $config = parse_ini_file($_SERVER['HOME'] . '/.odiostatsrc');
+if (empty($config['access_token'])) {
+	die("Falta el access_token\n");
+}
+if (empty($config['access_token'])) {
+	die("Falta el group_id. Para 'Odio a la gente que...' usar 227624113988088\n");
+}
 $finished = FALSE;
-$url = 'https://graph.facebook.com/227624113988088/feed?access_token=' . $config['access_token'] . '&limit=500';
+$url = 'https://graph.facebook.com/' . $config['group_id'] . '/feed?access_token=' . $config['access_token'] . '&limit=500';
 
 $people = array();
 $posts_per_people = array();
