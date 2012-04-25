@@ -36,6 +36,6 @@ do {
 	//if (empty($url)) break;
 	break;
 } while (!$finished);
-echo "Máximo odiador: " , $people[array_search(max($posts_per_people), $posts_per_people)]->name , " con " , max($posts_per_people) , " mensajes\n";
-echo "Odio más compartido: Con " , $top_liked_post->likes->count , " votos, \"" , $top_liked_post->message , "\" " , $top_liked_post->actions[0]->link , "\n";
-echo "Odio más discutido: Con " , $top_commented_post->comments->count , " comentarios, \"" , $top_commented_post->message , "\" " , $top_commented_post->actions[0]->link , "\n";
+echo "Máximo odiador: " , $people[array_search(max($posts_per_people), $posts_per_people)]->name , " con " , max($posts_per_people) , " mensajes\\n";
+echo "Odio más compartido: Con " , $top_liked_post->likes->count , " votos, \"" , $top_liked_post->message , "\" " , $top_liked_post->actions[0]->link , "\\n";
+echo "Odio más discutido: Con " , $top_commented_post->comments->count , " comentarios, \"" , $top_commented_post->message , "\" " , $top_commented_post->actions[0]->link , "\\n";
