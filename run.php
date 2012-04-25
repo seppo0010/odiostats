@@ -10,7 +10,7 @@ $config = parse_ini_file($_SERVER['HOME'] . '/.odiostatsrc');
 if (empty($config['access_token'])) {
 	die("Falta el access_token\n");
 }
-if (empty($config['access_token'])) {
+if (empty($config['group_id'])) {
 	die("Falta el group_id. Para 'Odio a la gente que...' usar 227624113988088\n");
 }
 $finished = FALSE;
