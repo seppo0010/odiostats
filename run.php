@@ -14,7 +14,7 @@ if (empty($config['group_id'])) {
 	die("Falta el group_id. Para 'Odio a la gente que...' usar 227624113988088\n");
 }
 $finished = FALSE;
-$url = 'https://graph.facebook.com/' . $config['group_id'] . '/feed?access_token=' . $config['access_token'] . '&limit=500';
+$url = 'https://graph.facebook.com/' . $config['group_id'] . '/feed?access_token=' . $config['access_token'] . '&limit=1000';
 
 $people = array();
 $posts_per_people = array();
