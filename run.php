@@ -108,22 +108,22 @@ do {
 
 if (count($people) == 0) die("No hubo posts este mes.\n");
 
-echo "Máximo odiador: " , $people[array_search(max($posts_per_people), $posts_per_people)]->name , " con " , max($posts_per_people) , " mensajes\\n";
+echo "Máximo odiador: " , $people[array_search(max($posts_per_people), $posts_per_people)]->name , " con " , max($posts_per_people) , " mensajes\n";
 
-echo "Tipo más carismático: " , $people[array_search(max($likes_received_per_people), $likes_received_per_people)]->name , " con " , max($likes_received_per_people) , " votos\\n";
+echo "Tipo más carismático: " , $people[array_search(max($likes_received_per_people), $likes_received_per_people)]->name , " con " , max($likes_received_per_people) , " votos\n";
 
-echo "Tipo más controversial: " , $people[array_search(max($comments_received_per_people), $comments_received_per_people)]->name , " con " , max($comments_received_per_people) , " comentarios recibidos\\n";
+echo "Tipo más controversial: " , $people[array_search(max($comments_received_per_people), $comments_received_per_people)]->name , " con " , max($comments_received_per_people) , " comentarios recibidos\n";
 
 if (count($comments_per_people) > 0) {
-	echo "Máximo opinólogo: " , $people[array_search(max($comments_per_people), $comments_per_people)]->name , " con " , max($comments_per_people) , " comentarios\\n";
+	echo "Máximo opinólogo: " , $people[array_search(max($comments_per_people), $comments_per_people)]->name , " con " , max($comments_per_people) , " comentarios\n";
 }
 
 if (count($autolikes_per_people) > 0) {
-	echo "Máximo onanista: " , $people[array_search(max($autolikes_per_people), $autolikes_per_people)]->name , " con " , max($autolikes_per_people) , " auto-likes\\n";
+	echo "Máximo onanista: " , $people[array_search(max($autolikes_per_people), $autolikes_per_people)]->name , " con " , max($autolikes_per_people) , " auto-likes\n";
 }
 
 if (count($autocomments_per_people) > 0) {
-	echo "Máximo autobombista: " , $people[array_search(max($autocomments_per_people), $autocomments_per_people)]->name , " con " , max($autocomments_per_people) , " comentarios a posts propios\\n";
+	echo "Máximo autobombista: " , $people[array_search(max($autocomments_per_people), $autocomments_per_people)]->name , " con " , max($autocomments_per_people) , " comentarios a posts propios\n";
 }
 
 $max_ignored = null;
@@ -146,13 +146,13 @@ foreach (@$people as $person) {
 		}
 	}
 }
-echo "Máximo ignorado: " , $max_ignored->name , " con " , $max_ignored_posts , " mensajes, " , $max_ignored_comments_received , " comentarios recibidos y " , $max_ignored_likes_received , " votos\\n";
+echo "Máximo ignorado: " , $max_ignored->name , " con " , $max_ignored_posts , " mensajes, " , $max_ignored_comments_received , " comentarios recibidos y " , $max_ignored_likes_received , " votos\n";
 
-echo "Odio más compartido: Con " , (@$top_liked_post->likes->count + 0) , " votos ajenos, \"" , getMessageString($top_liked_post) , "\" " , $top_liked_post->actions[0]->link , "\\n";
+echo "Odio más compartido: Con " , (@$top_liked_post->likes->count + 0) , " votos ajenos, \"" , getMessageString($top_liked_post) , "\" " , $top_liked_post->actions[0]->link , "\n";
 
-echo "Odio menos compartido: Con " , (@$bottom_liked_post->likes->count + 0) , " votos ajenos, \"" , getMessageString($bottom_liked_post) , "\" " , $bottom_liked_post->actions[0]->link , "\\n";
+echo "Odio menos compartido: Con " , (@$bottom_liked_post->likes->count + 0) , " votos ajenos, \"" , getMessageString($bottom_liked_post) , "\" " , $bottom_liked_post->actions[0]->link , "\n";
 
-echo "Odio más discutido: Con " , (@$top_commented_post->comments->count + 0) , " comentarios ajenos, \"" , getMessageString($top_commented_post) , "\" " , $top_commented_post->actions[0]->link , "\\n";
+echo "Odio más discutido: Con " , (@$top_commented_post->comments->count + 0) , " comentarios ajenos, \"" , getMessageString($top_commented_post) , "\" " , $top_commented_post->actions[0]->link , "\n";
 
-echo "Odio menos discutido: Con " , (@$bottom_commented_post->comments->count + 0) , " comentarios ajenos, \"" , getMessageString($bottom_commented_post) , "\" " , $bottom_commented_post->actions[0]->link , "\\n";
+echo "Odio menos discutido: Con " , (@$bottom_commented_post->comments->count + 0) , " comentarios ajenos, \"" , getMessageString($bottom_commented_post) , "\" " , $bottom_commented_post->actions[0]->link , "\n";
 
