@@ -3,3 +3,7 @@ Script to measure Facebook group monthly statistics.
 You have to store a valid access token into ~/.odiostatsrc
 
 To get a new access token, open http://developers.facebook.com/tools/explorer/?method=GET&path=227624113988088%2Ffeed and press "Get access token". Remember to select user_group permission.
+
+~/.odiostatsrc template:
+access_token={ACCESS_TOKEN}
+group_id={FACEBOOK_GROUP_ID}
